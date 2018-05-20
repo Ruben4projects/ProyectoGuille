@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+  margin-bottom: 40px;
+
+}
+@font-face {
+  font-family: logo;
+  src: url(../fonts/againts.otf);}
+.logo{
+    font-family: logo;
+    font-size: 30px;
+  }
+
+@font-face {
+  font-family: myFont;
+  src: url(../fonts/big_noodle_titling.ttf);}
+
+.titulos{
+font-family: myFont;
+font-size: 70px;
+} 
+
+.espacio{
+	height:  100px;
+}
+.footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+ 
+}
+.footer h4{
+
+	 color: rgb(255,255,255) !important;
+}
+
+.navbar{
+  background-color: rgb(50,50,50);
+  margin-bottom: 0px !important;
+  border: none !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: rgb(220,220,220);
+}
+
+.navbar-default .navbar-brand{
+
+    color: white;
+}
+
+.navbar-default .navbar-brand:hover{
+
+    color: white;
+}
+
+.dropdown-menu {
+  background-color: rgb(50,50,50);
+}
+.dropdown-menu> li >a {
+  color: white;
+}
+
+
+
+.dark{
+  background-color: black !important;
+}
+
+.ancho{
+  width: 170px !important;
+  height:28px !important;
+}
+
+.ancho{
+  width: 170px !important;
+  height:28px !important;
+}
+
+.borde{
+  box-shadow: 3px 6px 22px -6px rgba(0,0,0,0.75);
+
+}

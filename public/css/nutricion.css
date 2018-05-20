@@ -1,0 +1,119 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+.panel-body .panel-default .receta-image-thumb{
+  padding-left: 0px;
+}
+
+
+
+.receta-image{
+  width:100%;
+  height:100%;
+}
+
+.receta-title{
+  font-weight: bold;
+}
+
+.receta-title a{
+  color:#444;
+}
+
+
+.detail-receta-image{
+  width:100%;
+  height:100%;
+}
+
+.receta-image-mask{
+	width:240px;
+	height:180px;
+}
+
+
+
+/*Imagen cabecera--------------------*/
+.sizeimg{
+ height:310px;
+ width: 100%;
+ overflow: hidden;
+
+}
+
+.imgindex{
+  width: 100%; 
+  z-index: -1;
+ position: relative;
+ top:-280px;
+
+
+}
+@font-face {
+  font-family: myFont;
+  src: url(../fonts/big_noodle_titling.ttf);}
+
+.titulo{
+	color: white;
+	position: relative;
+	top:50px;
+	font-size: 100px;
+	font-family: myFont;
+text-shadow: 3px 2px 9px rgba(0, 0, 0, 0.6);  
+
+}
+
+@media (max-width: 1500px) {
+  .imgindex { 
+   width: 100%; 
+  z-index: -1;
+ position: relative;
+ top:-150px;
+}
+}
+
+.imgindexD{
+  width: 100%; 
+  z-index: -1;
+ position: relative;
+ top:-300px;
+
+}
+
+@media (max-width: 1200px) {
+  .imgindexD { 
+   width: 100%; 
+  z-index: -1;
+ position: relative;
+ top:-200px;
+}
+}
+
+.imgindexN{
+  width: 100%; 
+  z-index: -1;
+ position: relative;
+ top:-1100px;
+
+
+}
+
+
+@media (max-width: 1920px) {
+  .imgindexN { 
+   width: 100%; 
+  z-index: -1;
+ position: relative;
+ top:-700px;
+}
+}
+
+.mipanel{
+box-shadow: 3px 6px 22px -6px rgba(0,0,0,0.75);
+
+}
+
+.colorB{
+  background-color: rgb(50,50,50) !important;
+  border:none !important;
+}
+
