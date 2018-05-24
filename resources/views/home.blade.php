@@ -77,16 +77,32 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-xs-12 col-md-3">
+        <div class="col-xs-12 col-md-3 col-sm-4">
             <div class="sizeimg">
          <img class="img-fluid imgindex" src="{{asset('/images/fitness.jpg')}}"  >
         </div>
         </div>
+        <?php 
+            function cortar_string ($string) { 
+               $marca = "<!--corte-->"; 
+               $largo = 150; 
+
+             
+               if (strlen($string) > $largo) { 
+                    
+                   $string = wordwrap($string, $largo, $marca); 
+                   $string = explode($marca, $string); 
+                   $string = $string[0]; 
+                   $string .= "...";
+               } 
+               return $string; 
+             
+            } ?>
                @foreach($rutinas as $rutina)
         <div class="col-xs-12 col-md-3">
             <br>
-           <div class="panel panel-default receta-data borde" style="height: 240px; ">
-            <div class="panel-heading">
+           <div class="panel panel-default receta-data borde ">
+            <div class="panel-heading ">
                 <div class="pull-right">
                     <b style="font-size: 22px;">{{$rutina->puntuacion}}<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">   </span></b> 
                 </div>
@@ -97,13 +113,23 @@
 
                 </div>
             </div>
-            <div class="panel-body">
-                {{$rutina->descripcion}} 
+            <div class="panel-body bodysize">
+
+ 
+             {{cortar_string ($rutina->descripcion)}}<br> 
+               
                 <br>
-                 <span class="fas fa-transgender"></span> {{$rutina->sexo}} <i class="fas fa-balance-scale"></i> {{$rutina->tipo}} <i class="fas fa-signal"></i> {{$rutina->nivel}}
+                    </div>
+                <div class="panel-footer">
+                  <div class="pull-left"><span class="fas fa-calendar-alt"></span>&nbsp{{$rutina->dias}} dias</div>
+                  <div class="pull-right"><span class="fas fa-transgender"></span> {{$rutina->sexo}}</div><br>
+                  <div class="pull-left"> <i class="fas fa-balance-scale"></i>{{$rutina->tipo}}  </div>
+                   <div class="pull-right"><i class="fas fa-signal pull-left"></i> {{$rutina->nivel}}</div><br>
+                </div>
+                
             
                 
-            </div>
+        
         </div>
         </div>
         @endforeach
@@ -136,7 +162,7 @@
         
             <div class="panel panel-default panel-front borde ">       
             
-                <div class="panel-heading borde ">
+                <div class="panel-heading">
                 
                     <h4 class="panel-title"><a href=""><img src="{{url('/miniatura/'.$receta->image)}}"  /></a></h4>
                     
@@ -186,20 +212,20 @@
          <img class="img-fluid imgindex" src="{{asset('/images/dieta.jpg')}}"  >
         </div>
         </div>
-               @foreach($rutinas as $rutina)
+               @foreach($dietas as $dieta)
         <div class="col-xs-12 col-md-3">
             <br>
            <div class="panel panel-default receta-data borde">
             <div class="panel-heading">
                 <div class="pull-right">
-                    <b style="font-size: 22px;">{{$rutina->puntuacion}}<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">   </span></b> 
+                    <b style="font-size: 22px;">{{$dieta->puntuacion}}<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">   </span></b> 
                 </div>
                 <div class="panel-title">
-                   {{$rutina->nombre}}
+                   {{$dieta->nombre}}
                 </div>
             </div>
-            <div class="panel-body">
-                {{$rutina->descripcion}} 
+            <div class="panel-body bodysize">
+             {{cortar_string ($dieta->descripcion)}}<br> 
                 <br>
             
                 

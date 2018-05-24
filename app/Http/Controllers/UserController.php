@@ -28,9 +28,12 @@ class UserController extends Controller
     {
         $rutinas = Rutina::orderBy('puntuacion','desc')->limit(3)->get();
         $recetas = Nutricion::orderBy('puntuacion','desc')->limit(3)->get();
+        $dietas = Dieta::orderBy('puntuacion','desc')->limit(3)->get();
+
         return view('home', array(
             'rutinas'=> $rutinas,
-            'recetas'=> $recetas
+            'recetas'=> $recetas,
+            'dietas' => $dietas
 
         ));
 

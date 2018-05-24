@@ -76,7 +76,7 @@ font-size: 70px;
 
 
 .dark{
-  background-color: black !important;
+  background-color: rgba(50,50,0) !important;
 }
 
 .ancho{

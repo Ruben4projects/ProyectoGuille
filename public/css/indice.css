@@ -337,7 +337,7 @@ a.slide__text-link:hover { text-decoration:none; color:#FFF;}
 
 .imgindex{
   width: 100%; 
-  position: relative;
+  margin-top: 20px;
   
 
 }
@@ -407,4 +407,13 @@ background-color: rgb(240,240,240);
     padding-top: 50px;
     padding-bottom: 50px;
 
+}
+
+.bodysize{
+   height: 150px;
+}
+
+.caracteristicas{
+  position: relative;
+  bottom: -60px;
 }

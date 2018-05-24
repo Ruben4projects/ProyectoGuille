@@ -51,16 +51,16 @@
                       
                     </form>
                         <li><a href="{{ route('home')}} ">Home</a></li>
+                        @if(Auth::user())
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rutinas <b class="caret"></b></a>
                             <ul class="dropdown-menu">
 
                                 <li>
-                                     @if(Auth::user())
+                                    
                                      <a href="{{ route('crearRutina') }}"> Crear rutina </a>
-                                     @endif
                                 </li>
-                                <li><a href="{{ route('rutinaIndex')}}">Rutinas</a></li>
+                                <li><a href="{{ route('rutinaIndex')}}">Todas las rutinas</a></li>
                                 
                                                       
                             </ul>
@@ -70,11 +70,10 @@
                             <ul class="dropdown-menu">
 
                                 <li>
-                                     @if(Auth::user())
                                      <a href="{{ route('crearDieta') }}"> Crear dieta </a>
-                                     @endif
+                                     
                                 </li>
-                                <li><a href="{{ route('dietaIndex')}}">Dietas</a>
+                                <li><a href="{{ route('dietaIndex')}}">Todas las dietas</a>
                                                         
                             </ul>
                         </li>
@@ -82,15 +81,21 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nutrición <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                  <li>
-                                     @if(Auth::user())
                                      <a href="{{ route('crearReceta') }}"> Crear receta </a>
-                                     @endif
                                 </li>
-                                <li><a href="{{ route('indexNutricion')}}">Recetas</a></li>
+                                <li><a href="{{ route('indexNutricion')}}">Todas las recetas</a></li>
                                                                         
                             </ul>
                         </li>
+                        @else
+                        <li><a href="{{ route('rutinaIndex')}} ">Rutinas</a></li>
+                        <li><a href="{{ route('dietaIndex')}} ">Dietas</a></li>
+                        <li><a href="{{ route('indexNutricion')}} ">Nutricion</a></li>
+
+                        @endif
+
                          @if (Auth::guest())
+                        }
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entrar <b class="caret"></b></a> 
 

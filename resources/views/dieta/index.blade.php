@@ -1,9 +1,9 @@
 @extends('layouts.app')
+ <link href="{{ asset('css/nutricion.css') }}" rel="stylesheet">
 
 @section('content')
 
     <!-- Styles -->
- <link href="{{ asset('css/nutricion.css') }}" rel="stylesheet">
    
     
 </head>
@@ -39,7 +39,7 @@
   </div>
   <div class="form-group col-md-4">
   	<br>
-  	  <button type="submit" class="btn btn-primary form-control">Filtrar</button>
+  	  <button type="submit" class="btn btn-primary colorB form-control">Filtrar</button>
   </div>
 </div>
   
@@ -99,7 +99,7 @@
 								<div class="col-md-4 ">
 									<div class="pull-right">
 										
-										<a href="{{route('dieta', ['dieta' => $dieta->id])}}" class="btn btn-success">Ver</a>
+										<a href="{{route('dieta', ['dieta' => $dieta->id])}}" class="btn btn-success colorB">Ver</a>
 										
 									</div>
 								</div>
